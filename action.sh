@@ -46,6 +46,7 @@ function build() {
 		popd
 	else
 		git clone https://github.com/openwrt/openwrt.git ./openwrt
+		git clone -b 2.6-stable-ivy-fix https://github.com/omniedgeio/n2n.git ./openwrt/package/network/utils/n2n
 		[ -f ./feeds.conf.default ] && cat ./feeds.conf.default >>./openwrt/feeds.conf.default
 	fi
 	pushd openwrt
